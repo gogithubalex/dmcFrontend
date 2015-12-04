@@ -4,32 +4,25 @@
 *
 * Dashboard
 */
-angular.module('dmc.home', ['dmc.configs.ngmaterial', 'ngMdIcons', 'ui.router', 'md.data.table', 'dmc.common.header', 'dmc.common.footer'])
-.config(function($stateProvider, $urlRouterProvider){
-  $stateProvider
-    .state('home', {
-      url: '',
-      abstract: true
-    });
-  $urlRouterProvider.otherwise('/');
-}).controller('HomeCtr',['$scope',function($scope){
+angular.module('dmc').controller('HomeCtr',['$scope',function($scope){
+    $scope.pageName = "home";
     $scope.pages = [
         {
             name : "My Dashboard",
             text : "Design Solutions",
-            href : "dashboard.php",
+            href : "#/dashboard",
             img : "home-dashboard-icon.png"
         },
         {
             name : "Marketplace",
             text : "Find Solutions",
-            href : "marketplace.php",
+            href : "#/marketplace/services",
             img : "home-market-icon.png"
         },
         {
             name : "Community",
             text : "Find People",
-            href : "",
+            href : "#/community",
             img : "home-community-icon.png"
         }
     ];

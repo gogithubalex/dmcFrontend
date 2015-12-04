@@ -1,31 +1,7 @@
 'use strict';
 
-angular.module('dmc.product', [
-  'dmc.configs.ngmaterial',
-  'ngMdIcons',
-  'ngtimeago',
-  'ui.router',
-  'md.data.table',
-  'dmc.ajax',
-  'dmc.data',
-  'dmc.socket',
-  'dmc.widgets.stars',
-  'dmc.component.treemenu',
-  'dmc.component.productcard',
-  'dmc.common.header',
-  'dmc.common.footer',
-  'dmc.component.carousel'
-])
-  .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider){
-    //$locationProvider.html5Mode(true).hashPrefix('#');
-    $stateProvider.state('product', {
-      url: '/:typeProduct/:productId',//
-      templateUrl: 'templates/product/product.html',
-      controller: 'ProductController'
-    });
-    $urlRouterProvider.otherwise('/services/1');
-  })
-  .controller('ProductController', function ($stateParams, $scope, ajax, dataFactory) {
+angular.module('dmc')
+.controller('ProductCtr', function ($stateParams, $scope, ajax, dataFactory) {
 
     $scope.product = [];  //array product
     $scope.number_of_comments = 0; // number of reviews
