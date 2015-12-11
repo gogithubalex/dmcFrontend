@@ -1,14 +1,6 @@
 'use strict';
 
-angular.module('dmc', [
-    'ngMdIcons',
-    'ngAnimate',
-    'ngCookies',
-    'dmc.ajax',
-    'dmc.data',
-    'dmc.mobile',
-    'rfpInvite',
-    'dmc.configs.ngmaterial',
+angular.module('dmc.widgets', [
     'dmc.widgets.projects',
     'dmc.widgets.services',
     'dmc.widgets.tasks',
@@ -18,6 +10,20 @@ angular.module('dmc', [
     'dmc.widgets.questions',
     'dmc.widgets.submissions',
     'dmc.widgets.invited-users',
+    'dmc.widgets.stars'
+]);
+
+angular.module('dmc', [
+    'angularLoad',
+    'ngMdIcons',
+    'ngAnimate',
+    'ngCookies',
+    'dmc.ajax',
+    'dmc.data',
+    'dmc.mobile',
+    'rfpInvite',
+    'dmc.widgets',
+    'dmc.configs.ngmaterial',
     'dmc.component.treemenu',
     'dmc.component.productscard',
     'dmc.component.carousel',
@@ -29,8 +35,7 @@ angular.module('dmc', [
     'ui.router',
     'ui.autocomplete',
     'ngtimeago',
-    'md.data.table',
-    'dmc.widgets.stars'
+    'md.data.table'
 ])
 .config(function($stateProvider, $urlRouterProvider, $httpProvider){
     $stateProvider.state('home', {          // home page

@@ -16,6 +16,9 @@ angular.module('dmc.ajax',[]).factory('ajax', function () {
                         errorFunction()
                     }
                 });
+            },
+            off: function(){
+
             }
         };
     }

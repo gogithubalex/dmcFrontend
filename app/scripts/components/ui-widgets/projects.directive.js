@@ -66,7 +66,6 @@ angular.module('dmc.widgets.projects',[
                         alert("Ajax faild: getProjects");
                     });
                 };
-
                 $scope.getProjects();
 
                 //socketFactory.on(socketFactory.updated().projects, function(item){

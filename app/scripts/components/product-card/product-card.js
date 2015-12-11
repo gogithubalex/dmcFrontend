@@ -4,28 +4,11 @@
 *
 * DMC Tree Menu
 */
-
-
-
 angular.module('dmc.component.productcard', [
     'dmc.ajax',
     'dmc.data',
     'ngCookies'
 ])
-.run(function($rootScope,ajax,dataFactory){
-  ajax.on(
-    dataFactory.getUrlAllProjects(),
-    {
-      limit : 10, offset: 0
-    },
-    function(data){
-      $rootScope.projects = data.result;
-    },
-    function(){
-      alert("Ajax faild: getProjects");
-    }
-  );
-})
 .directive('dmcProductCard', function(){
      return {
       restrict: 'E',

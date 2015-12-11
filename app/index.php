@@ -81,10 +81,11 @@
     <script src="/bower_components/ng-timeago/ngtimeago.js"></script>
     <script src="/bower_components/ui-autocomplete/autocomplete.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-load/angular-load.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/home/index.js -->
+    <!-- build:js scripts/index.js -->
     <script src="scripts/configs/ngMaterial-config.js"></script>
     <script src="scripts/common/header/header.js"></script>
     <script src="scripts/common/footer/footer.js"></script>
@@ -112,17 +113,39 @@
     <script src="scripts/common/factory/data.factory.js"></script>
     <script src="scripts/common/factory/mobile.factory.js"></script>
     <script src="scripts/common/models/project-model.js"></script>
-
-    <!--  Main  -->
     <script src="scripts/main.js"></script>
-    <!--  Pages  -->
+    <!-- endbuild -->
+
+
+    <!-- build:js scripts/home/index.js -->
     <script src="scripts/home/home.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/dashboard/index.js -->
     <script src="scripts/dashboard/dashboard.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/marketplace/index.js -->
     <script src="scripts/marketplace/marketplace.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/my_projects/index.js -->
     <script src="scripts/my_projects/my_projects.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/invite-challenge/index.js -->
     <script src="scripts/invite-challenge/invite-challenge.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/product/index.js -->
     <script src="scripts/product/product.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/community/index.js -->
     <script src="scripts/community/community.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/project/index.js -->
     <script src="scripts/project/project.js"></script>
     <script src="scripts/project/controllers/id-locator.js"></script>
     <script src="scripts/project/controllers/discussions.js"></script>
@@ -137,6 +160,7 @@
     <script src="scripts/project/controllers/rfp-questions.js"></script>
     <script src="scripts/project/controllers/rfp-people-invited.js"></script>
     <!-- endbuild -->
+
     <script type="text/javascript">
         window.apiUrl = '';
     </script>
