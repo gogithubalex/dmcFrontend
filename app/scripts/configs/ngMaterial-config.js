@@ -15,6 +15,7 @@ angular.module('dmc.configs.ngmaterial', ['ngMaterial'])
     'A100': '65AF3F'
   });
   // Register the new color palette map with the name <code>neonRed</code>
+  $mdThemingProvider.theme('error-toast');
   $mdThemingProvider.definePalette('dmcTheme', dmcMap);
   $mdThemingProvider.definePalette('dmcAccentTheme', dmcAccentMap);
   // Use that theme for the primary intentions

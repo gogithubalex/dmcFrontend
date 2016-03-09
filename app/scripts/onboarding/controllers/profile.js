@@ -10,6 +10,13 @@ angular.module('dmc.onboarding')
 
 
 //upload file
+	$scope.creds = {
+	bucket: 'dmc-test',
+	access_key: 'AKIAI3UDZVKQDH2E5R5A',
+	secret_key: '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'
+	}
+ 
+
         $scope.prevPicture = null;
         $scope.pictureDragEnter = function(flow){
             $scope.prevPicture = flow.files[0];
@@ -62,6 +69,48 @@ angular.module('dmc.onboarding')
         }
 
         $scope.next = function(index){
+	    file = $scope.file.files[0];
+//	    alert(file.size);
+//	    alert(file.name);
+	    if(file.size > 10585760) {
+	      alert('Sorry, file size must be under 10MB');
+	      return false;
+	    }
+
+  // Configure The S3 Object
+  AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
+  AWS.config.region = 'us-east-1';
+  var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
+ 
+  if(file) {
+    var params = { Key: file.name, ContentType: file.type, Body: file.file, ServerSideEncryption: 'AES256' };
+ 
+    bucket.putObject(params, function(err, data) {
+      if(err) {
+        // There Was An Error With Your S3 Config
+        alert(err.message);
+        return false;
+      }
+      else {
+        // Success!
+        alert('Upload Done');
+      }
+    })
+    .on('httpUploadProgress',function(progress) {
+          // Log Progress Information
+          console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
+        });
+  }
+  else {
+    // No File Selected
+    alert('No File Selected');
+  }
+
+
+
+        }
+/*
+        $scope.next = function(index){
             $scope.storefront[index].done = true;
             if(index == 1 && $scope.file){
                 fileUpload.uploadFileToUrl(
@@ -86,6 +135,7 @@ angular.module('dmc.onboarding')
                 });
             }
         }
+*/
 
         $scope.finish = function(index){
             $scope.saveProfile($scope.profile[index].data, function(){
