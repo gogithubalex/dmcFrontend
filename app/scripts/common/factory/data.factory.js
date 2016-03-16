@@ -255,8 +255,8 @@ angular.module('dmc.data',[])
             addServiceToProject: function(id){
                 return localhost+'services/'+id;
             },
-            getMembersUrl: function() {
-                return localhost+'members';
+            getMembersUrl: function(id) {
+                return localhost+'members?id_ne='+id;
             },
             getMembersToProject: function() {
                 return localhost+'projects_members';
@@ -306,6 +306,15 @@ angular.module('dmc.data',[])
             updateProject: function(id){
                 return localhost+'projects/'+id;
             },
+            addProjectTag: function(){
+                return localhost+'projects_tags';
+            },
+            deleteProjectTag: function(id){
+                return localhost+'projects_tags/'+id;
+            },
+            getProjectTags: function(id){
+                return localhost+'projects/'+id+'/projects_tags/';
+            },
             createDiscussion: function(id){
                 return localhost+'discussions/create';
             },
@@ -330,6 +339,12 @@ angular.module('dmc.data',[])
                 }else{
                     return localhost+'tasks';
                 }
+            },
+            getTask: function(id){
+                return localhost+'tasks/'+id;
+            },
+            deleteTask: function(id){
+                return localhost+'tasks/'+id;
             },
             followCompany : function(){
                 return localhost+'company/follow';

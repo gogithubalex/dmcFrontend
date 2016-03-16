@@ -96,6 +96,7 @@
     <script src="scripts/components/ui-widgets/review.directive.js"></script>
     <script src="scripts/components/ui-widgets/tabs.directive.js"></script>
     <script src="scripts/components/ui-widgets/interfaces.directive.js"></script>
+    <script src="scripts/components/ui-widgets/project-tags.directive.js"></script>
     <script src="scripts/components/sub-nav-menu/sub-nav-menu.directive.js"></script>
     <script src="scripts/components/dropzone/dropzone.directive.js"></script>
     <script src="scripts/common/factory/socket.factory.js"></script>
@@ -107,6 +108,7 @@
     <script src="scripts/common/models/task-model.js"></script>
     <script src="scripts/common/models/discussion-model.js"></script>
     <script src="scripts/common/models/toast-model.js"></script>
+    <script src="scripts/common/models/question-toast-model.js"></script>
     <script src="scripts/common/models/user-model.js"></script>
     <script src="scripts/common/models/services.model.js"></script>
     <script src="scripts/common/models/dome-model.js"></script>
@@ -126,6 +128,7 @@
     <script src="scripts/project/controllers/home.js"></script>
     <script src="scripts/common/factory/notifications.factory.js"></script>
     <script src="scripts/project/controllers/tasks.js"></script>
+    <script src="scripts/project/controllers/task.js"></script>
     <script src="scripts/project/controllers/team.js"></script>
     <script src="scripts/project/controllers/workspace.js"></script>
     <script src="scripts/project/controllers/rfp-home.js"></script>

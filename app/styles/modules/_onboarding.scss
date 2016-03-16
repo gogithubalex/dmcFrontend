@@ -1,3 +1,20 @@
+.block-notification{
+  .notification-item{
+    .title-switch{
+      cursor: pointer;
+      outline: none;
+    }
+    md-switch{
+      margin: 5px;
+      &.md-checked .md-thumb{
+        background-color: rgb(100, 173, 69);
+      }
+      &.md-checked .md-bar{
+        background-color: rgb(100,220,69);
+      }
+    }
+  }
+}
 .onboarding-home{
   md-content{
     background-color: transparent;
@@ -122,7 +139,7 @@
     margin-bottom: 20px;
   }
   h2{
-    margin-top: 0;
+    margin-bottom: 3px;
   }
   h3{
     font-weight: normal;
@@ -355,9 +372,14 @@
       }
     }
     .img-box{
-    	width: 170px;
-    	margin-right: 16px;
+      //width: 170px;
+      //margin-right: 16px;
+      margin-bottom: 10px;
       position: relative;
+      overflow: hidden;
+      height: 200px;
+      background-position: center;
+      background-size: cover;
       .removed-images{
           position: absolute;
           right: 3px;
@@ -367,18 +389,6 @@
           ng-md-icon {
             fill: #fff;
           }
-        //   ng-md-icon {
-        //     fill: #555;
-        //     background-color: rgba(255, 255, 255, 0.8);
-        //     @include borderRadius(50%);
-        //     height: 32px;
-        //   }
-        //   &:hover{
-        //     ng-md-icon {
-        //       fill: #C32E2E;
-        //       background-color: rgba(255, 255, 255, 1);
-        //     }
-        //   }
         }
     }
   }

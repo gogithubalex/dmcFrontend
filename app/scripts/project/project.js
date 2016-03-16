@@ -38,6 +38,7 @@ angular.module('dmc.project', [
 		'ui.sortable',
 		'dmc.model.toast-model',
 		'dmc.model.services',
+        'dmc.widgets.project-tags',
 		'dmc.sub-nav-menu'
 ])
 .config(function($stateProvider, $urlRouterProvider, $httpProvider){
@@ -115,6 +116,10 @@ angular.module('dmc.project', [
             url: '/tasks?text?type',
             controller: 'TasksCtrl as projectCtrl',
             templateUrl: 'templates/project/pages/tasks.html'
+        }).state('project.task', {
+            url: '/task/:taskId',
+            controller: 'TaskCtrl as projectCtrl',
+            templateUrl: 'templates/project/pages/task.html'
         }).state('project.team', {
             url: '/team?text?type',
             controller: 'TeamCtrl as projectCtrl',
@@ -225,7 +230,7 @@ angular.module('dmc.project', [
 		ajax.get(dataFactory.getMembersToProject(), 
             {
                 "projectId" : $stateParams.projectId,
-                "profileId" : $scope.$root.userData.profileId,
+                "profileId" : $scope.$root.userData.profileId
             }, 
             function(response){
             	console.info(response);

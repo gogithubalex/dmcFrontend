@@ -219,7 +219,9 @@ angular.module('dmc.component.productcard', [
                       serviceId : ($scope.cardSource.id ? $scope.cardSource.id : 1)
                   }
               }).then(function() {
+                  $(window).unbind('beforeunload');
               }, function() {
+                  $(window).unbind('beforeunload');
               });
           };
 
@@ -286,7 +288,9 @@ angular.module('dmc.component.productcard', [
                     serviceId : ($scope.product.id ? $scope.product.id : 1)
                 }
             }).then(function() {
+                $(window).unbind('beforeunload');
             }, function() {
+                $(window).unbind('beforeunload');
             });
         };
 
@@ -432,6 +436,11 @@ angular.module('dmc.component.productcard', [
         function selectedItemChange(item) {
 
         }
+
+        $(window).unbind('beforeunload');
+        $(window).bind('beforeunload', function(val){
+            return "";
+        });
 
         function getAllUser(){
             ajax.get(dataFactory.profiles().all,{},function(response){
