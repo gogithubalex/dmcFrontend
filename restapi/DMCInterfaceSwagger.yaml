@@ -750,7 +750,8 @@ paths:
       tags:
         - project
         - discussion
-        - not implemented
+        - live
+        - has tests
       description: Get all user discussion threads
       parameters:
         - name: _limit
@@ -869,7 +870,8 @@ paths:
       tags:
         - project
         - add member
-        - not implemented
+        - live
+        - has tests
       description: Accept member inivitation
       parameters:
         - in: path
@@ -896,7 +898,7 @@ paths:
       tags:
         - project
         - add member
-        - not implemented
+        - live
       description: Decline member inivitation
       parameters:
         - in: path
@@ -978,6 +980,7 @@ paths:
     patch:
       tags:
         - task
+        - not implemented
       description: Update task
       parameters:
         - name: taskID
@@ -1094,7 +1097,8 @@ paths:
     post:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Post a new dome interface
       parameters:
         - in: body
@@ -1114,7 +1118,8 @@ paths:
     delete:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Get service dome interface
       parameters:
         - in: path
@@ -1128,7 +1133,8 @@ paths:
     patch:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Update dome interface
       parameters:
         - in: path
@@ -1150,7 +1156,8 @@ paths:
     get:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Get dome interface
       parameters:
         - in: path
@@ -1167,7 +1174,8 @@ paths:
     get:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Get children from Dome API
       parameters:
         - in: query
@@ -1221,7 +1229,8 @@ paths:
     get:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Get model from Dome API
       parameters:
         - in: query
@@ -1275,7 +1284,8 @@ paths:
     get:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       description: Get service dome interface
       parameters:
         - in: path
@@ -1407,7 +1417,8 @@ paths:
     post:
       tags:
         - service
-        - not implemented
+        - live
+        - has tests
       summary: Post a new service
       description: Post a new service to store in the database
       operationId: postService
@@ -1480,7 +1491,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Update information for service by ID
       parameters:
         - name: serviceID
