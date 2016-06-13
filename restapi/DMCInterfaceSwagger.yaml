@@ -457,7 +457,8 @@ paths:
     post:
       tags:
         - project
-        - not implemented
+        - live
+        - has tests
       description: Add new project tag
       parameters:
         - in: body
@@ -475,7 +476,8 @@ paths:
     delete:
       tags:
         - project
-        - not implemented
+        - live
+        - has tests
       description: Delete Project Tag
       parameters:
         - name: projectTagid
@@ -490,7 +492,8 @@ paths:
     get:
       tags:
         - project
-        - not implemented
+        - live
+        - has tests
       description: Get all project members
       parameters:
         - name: projectID
@@ -536,7 +539,8 @@ paths:
     get:
       tags:
         - project
-        - not implemented
+        - live
+        - has tests
       description: Get all project tags
       parameters:
         - name: projectID
@@ -711,7 +715,8 @@ paths:
       tags:
         - project
         - discussion
-        - not implemented
+        - live
+        - has tests
       description: Get all project discussion threads
       parameters:
         - name: projectID
