@@ -2150,7 +2150,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Get all tags for a service
       parameters:
         - name: serviceID
@@ -2189,7 +2190,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Create a new service tag
       parameters:
         - in: body
@@ -2207,7 +2209,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Get latest service tag
       parameters:
         - name: _limit
@@ -2241,7 +2244,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Delete a service tag
       parameters:
         - in: path
@@ -2257,7 +2261,8 @@ paths:
       tags:
         - service
         - specification
-        - not implemented
+        - live
+        - has tests
       operationId: postServiceSpecification
       parameters:
         - name: serviceID
@@ -3116,7 +3121,8 @@ paths:
     get:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Get company profile videos
       description: Get company profile videos based on companyID
       parameters:
@@ -3136,7 +3142,8 @@ paths:
     get:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Get company profile skill
       description: Get company profile skill based on companyID
       parameters:
@@ -3156,7 +3163,8 @@ paths:
     get:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Get company profile contacts
       description: Get company profile contacts based on companyID
       parameters:
@@ -3651,7 +3659,8 @@ paths:
     post:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Post a new company skill
       description: Post a new company skill
       parameters:
@@ -3670,7 +3679,8 @@ paths:
     delete:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       description: Delete a skill by id
       parameters:
         - in: path
@@ -3685,7 +3695,8 @@ paths:
     post:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Post a new company video
       description: Post a new company video
       parameters:
@@ -3704,7 +3715,8 @@ paths:
     delete:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       description: Delete a video by id
       parameters:
         - in: path
@@ -3718,7 +3730,8 @@ paths:
     patch:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       description: Update company videos by ID
       parameters:
         - name: videoID
@@ -3739,7 +3752,8 @@ paths:
     post:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       summary: Post a new company contact
       description: Post a new company contact
       parameters:
@@ -3758,7 +3772,8 @@ paths:
     delete:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       description: Delete a contact by id
       parameters:
         - in: path
@@ -3772,7 +3787,8 @@ paths:
     patch:
       tags:
         - company
-        - not implemented
+        - live
+        - has tests
       description: Update company contact by ID
       parameters:
         - name: contactID
@@ -4443,7 +4459,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Get array of specifications for services
       parameters:
         - name: _limit
@@ -4476,7 +4493,8 @@ paths:
       tags:
         - service
         - marketplace
-        - not implemented
+        - live
+        - has tests
       description: Add elements to array of specifications for services
       parameters:
         - in: body
